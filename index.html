@@ -13,24 +13,23 @@
   :root {
     --bg:#1a1a1a; --ink:#ffffff; --muted:#d6d5cf; --faint:#878580;
     --line:rgba(255,255,255,0.12); --line-strong:rgba(255,255,255,0.24);
-    --hover-tint:rgba(255,255,255,0.05); --surface:#262624; --surface-hover:#2f2f2c;
-    --accent:#ace1ef; --accent2:#7bbf1a; --on-accent:#0f1417;
+    --surface:#262624; --accent:#ace1ef; --accent2:#7bbf1a; --on-accent:#0f1417;
     --warn:#e2b23a; --bad:#e0603f;
   }
   :root.light {
     --bg:#fbfaf6; --ink:#000000; --muted:#6f6d69; --faint:#93908b;
     --line:rgba(54,41,0,0.12); --line-strong:rgba(54,41,0,0.24);
-    --hover-tint:rgba(54,41,0,0.04); --surface:#f7f6ef; --surface-hover:#eeede6;
-    --accent:#4137ff; --accent2:#5f9e00; --on-accent:#ffffff;
+    --surface:#f7f6ef; --accent:#4137ff; --accent2:#5f9e00; --on-accent:#ffffff;
     --warn:#b8860b; --bad:#c0392b;
   }
   html { scroll-behavior:smooth; }
   body {
     margin:0; background:var(--bg); color:var(--ink);
     font-family:'Geist','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:16px; line-height:1.7;
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     font-optical-sizing:auto; font-feature-settings:"cv01","ss01";
-    line-height:1.6; transition:background .5s ease, color .5s ease;
+    transition:background .5s ease, color .5s ease;
   }
   ::selection { background:var(--accent); color:var(--on-accent); }
   a { color:var(--accent); text-decoration:none; }
@@ -40,88 +39,88 @@
   .mono { font-family:'JetBrains Mono',monospace; }
 
   /* ===== SIDEBAR ===== */
-  aside { position:fixed; top:0; left:0; height:100vh; width:210px; padding:22px 24px;
+  aside { position:fixed; top:0; left:0; height:100vh; width:212px; padding:24px 26px;
     display:flex; flex-direction:column; justify-content:space-between;
     border-right:1px solid var(--line); background:var(--bg); z-index:60; }
   .brand { display:flex; align-items:center; gap:9px; }
-  .brand .sq { width:16px; height:16px; border-radius:4px; background:var(--accent); display:block; }
-  .brand span { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink); }
-  nav.side { margin-top:48px; display:flex; flex-direction:column; gap:12px; }
-  nav.side a { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); transition:color .16s ease; }
+  .brand .sq { width:15px; height:15px; border-radius:4px; background:var(--accent); display:block; }
+  .brand span { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink); }
+  nav.side { margin-top:52px; display:flex; flex-direction:column; gap:15px; }
+  nav.side a { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.07em; text-transform:uppercase; color:var(--muted); transition:color .16s ease; }
   nav.side a:hover { color:var(--ink); text-decoration:none; }
   nav.side a.active { color:var(--accent); }
-  .side-foot { display:flex; align-items:center; gap:8px; }
+  .side-foot { display:flex; align-items:center; gap:9px; }
   .side-foot .lbl { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--faint); }
   #themeToggle { width:28px; height:28px; border:1px solid var(--line-strong); border-radius:6px; background:transparent; cursor:pointer; color:var(--muted); font-family:'JetBrains Mono',monospace; font-size:13px; display:flex; align-items:center; justify-content:center; }
   #themeToggle:hover { color:var(--ink); border-color:var(--accent); }
 
   /* ===== MAIN ===== */
-  main { margin-left:210px; }
-  .wrap { max-width:780px; padding:clamp(40px,6vh,80px) clamp(24px,5vw,64px) 130px; }
+  main { margin-left:212px; }
+  .wrap { max-width:720px; padding:clamp(44px,7vh,88px) clamp(24px,5vw,60px) 140px; }
 
   .eyebrow { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); }
-  h1 { font-weight:400; font-size:clamp(30px,4.4vw,42px); line-height:1.1; letter-spacing:-0.04em; margin:16px 0 0; }
-  h2 { font-weight:500; font-size:clamp(19px,2.4vw,23px); line-height:1.2; letter-spacing:-0.02em; margin:0; }
-  h3 { font-weight:600; font-size:14px; margin:0 0 6px; letter-spacing:-0.01em; }
-  p { margin:0 0 14px; }
-  .lede { font-size:clamp(15px,1.9vw,17px); color:var(--muted); margin-top:22px; max-width:64ch; }
-  section { padding:38px 0; border-top:1px solid var(--line); }
-  header { padding-bottom:8px; }
-  .sec-head { display:flex; align-items:baseline; gap:14px; margin-bottom:18px; }
+  h1 { font-weight:400; font-size:clamp(30px,4.4vw,42px); line-height:1.1; letter-spacing:-0.04em; margin:18px 0 0; }
+  h2 { font-weight:500; font-size:clamp(20px,2.5vw,25px); line-height:1.18; letter-spacing:-0.025em; margin:0; }
+  .lede { font-size:clamp(16px,2vw,18px); line-height:1.6; color:var(--muted); margin-top:24px; max-width:60ch; }
+  section { padding:clamp(40px,6vh,60px) 0; border-top:1px solid var(--line); }
+  header { padding-bottom:4px; }
+  .sec-head { display:flex; align-items:baseline; gap:14px; margin-bottom:22px; }
   .sec-num { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); }
-  ul, ol { margin:0 0 14px; padding-left:0; list-style:none; }
-  li { position:relative; padding-left:20px; margin:0 0 9px; color:var(--muted); }
+  p { margin:0 0 16px; max-width:64ch; }
+  ul, ol { margin:0 0 16px; padding-left:0; list-style:none; max-width:64ch; }
+  li { position:relative; padding-left:22px; margin:0 0 11px; color:var(--muted); }
   li strong { color:var(--ink); font-weight:600; }
-  ul li::before { content:""; position:absolute; left:2px; top:11px; width:5px; height:5px; background:var(--accent); }
+  ul li::before { content:""; position:absolute; left:2px; top:12px; width:5px; height:5px; background:var(--accent); }
   ol { counter-reset:step; }
   ol li { counter-increment:step; }
-  ol li::before { content:counter(step); position:absolute; left:0; top:0; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); }
+  ol li::before { content:counter(step); position:absolute; left:0; top:1px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); }
+
+  .block-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin:34px 0 10px; }
+  .block-label:first-of-type { margin-top:4px; }
   .kv { margin:0 0 14px; }
   .kv b { color:var(--ink); font-weight:600; }
-  .lights { display:flex; flex-direction:column; gap:8px; margin:14px 0; }
-  .light-row { display:flex; align-items:flex-start; gap:10px; color:var(--muted); }
-  .dot { width:9px; height:9px; border-radius:50%; margin-top:7px; flex:none; }
+  .lights { display:flex; flex-direction:column; gap:9px; margin:16px 0; }
+  .light-row { display:flex; align-items:flex-start; gap:11px; color:var(--muted); }
+  .dot { width:9px; height:9px; border-radius:50%; margin-top:8px; flex:none; }
   .dot.g { background:var(--accent2); } .dot.y { background:var(--warn); } .dot.r { background:var(--bad); }
   .lb { color:var(--ink); font-weight:600; }
-  .diag { display:flex; flex-direction:column; gap:7px; margin:12px 0 14px; }
+  .diag { display:flex; flex-direction:column; gap:8px; margin:14px 0 16px; }
   .diag div { color:var(--muted); }
   .diag b { color:var(--ink); font-weight:600; }
-  .arrow { color:var(--accent); padding:0 6px; }
-  .closer { font-size:15px; color:var(--ink); border-left:2px solid var(--accent); padding-left:14px; margin:18px 0 0; }
-  .callout { background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:6px; padding:16px 18px; margin:18px 0 0; font-size:14px; color:var(--muted); }
+  .arrow { color:var(--accent); padding:0 7px; }
+  .closer { font-size:16px; color:var(--ink); border-left:2px solid var(--accent); padding-left:16px; margin:20px 0 0; max-width:62ch; }
+  .callout { background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:8px; padding:18px 20px; margin:20px 0 0; font-size:14.5px; line-height:1.6; color:var(--muted); max-width:64ch; }
   .callout b { color:var(--ink); }
-  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:13px; }
-  th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); }
+  table { width:100%; border-collapse:collapse; margin:16px 0; font-size:13px; line-height:1.4; }
+  th, td { text-align:left; padding:10px 10px; border-bottom:1px solid var(--line); }
   th { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); font-weight:500; }
   td.n, th.n { text-align:right; font-variant-numeric:tabular-nums; }
   tr:first-child td { border-top:1px solid var(--line-strong); }
   .table-scroll { overflow-x:auto; }
-  figure { margin:16px 0; background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:6px; overflow:hidden; }
+  figure { margin:18px 0; background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:8px; overflow:hidden; max-width:600px; }
   figure img { display:block; width:100%; height:auto; }
-  figcaption { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.04em; text-transform:uppercase; color:var(--faint); padding:10px 14px; border-top:1px solid var(--line); }
+  figcaption { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.04em; text-transform:uppercase; color:var(--faint); padding:11px 14px; border-top:1px solid var(--line); }
   .fig-slot { min-height:120px; display:flex; align-items:center; justify-content:center; padding:22px; color:var(--faint); font-family:'JetBrains Mono',monospace; font-size:11px; text-align:center; }
-  .thumbs { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:12px 0; }
-  .thumbs figure { margin:0; }
-  .opts { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:18px 0; }
-  .opt { background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:6px; padding:20px; display:flex; flex-direction:column; }
-  .opt h3 { font-size:15px; margin-bottom:4px; }
-  .opt .sub { color:var(--muted); font-size:13px; margin-bottom:12px; }
-  .opt li { font-size:13px; }
+  .thumbs { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:12px 0; max-width:600px; }
+  .thumbs figure { margin:0; max-width:none; }
+  .opts { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0; max-width:none; }
+  .opt { background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:8px; padding:22px; display:flex; flex-direction:column; }
+  .opt h3 { font-size:15px; font-weight:600; margin:0 0 5px; }
+  .opt .sub { color:var(--muted); font-size:13.5px; line-height:1.55; margin-bottom:12px; }
+  .opt ul { margin:0; }
+  .opt li { font-size:13.5px; margin-bottom:8px; }
   .opt .grow { flex:1; }
-  .fee { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-top:14px; padding-top:12px; border-top:1px solid var(--line); }
-  .apx-lead { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin:34px 0 6px; }
-  h2.apx { margin-bottom:6px; }
+  .fee { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-top:16px; padding-top:14px; border-top:1px solid var(--line); }
+  .apx-lead { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin:38px 0 8px; }
 
   [data-reveal] { opacity:0; transform:translateY(10px); transition:opacity .6s ease, transform .6s ease; }
   [data-reveal].in { opacity:1; transform:none; }
-
   @media (prefers-reduced-motion: reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
   @media (max-width:860px){
     aside { position:static; height:auto; width:auto; flex-direction:row; align-items:center; justify-content:space-between; border-right:none; border-bottom:1px solid var(--line); padding:14px 20px; }
     nav.side { margin-top:0; flex-direction:row; flex-wrap:wrap; gap:14px; }
     .side-foot .lbl { display:none; }
     main { margin-left:0; }
-    .wrap { padding-top:32px; }
     .opts { grid-template-columns:1fr; }
     .thumbs { grid-template-columns:1fr 1fr; }
   }
@@ -130,15 +129,12 @@
 <body>
 
 <aside>
-  <div style="display:flex; flex-direction:column; gap:0;">
+  <div>
     <a class="brand" href="#top"><span class="sq"></span><span>Alt Ventures</span></a>
     <nav class="side">
       <a href="#top" data-nav="top">Overview</a>
-      <a href="#success" data-nav="success">Success</a>
-      <a href="#method" data-nav="method">Method</a>
-      <a href="#funnel" data-nav="funnel">Funnel</a>
-      <a href="#meta" data-nav="meta">Meta</a>
-      <a href="#reddit" data-nav="reddit">Reddit</a>
+      <a href="#how" data-nav="how">How we work</a>
+      <a href="#workstreams" data-nav="workstreams">Workstreams</a>
       <a href="#outcomes" data-nav="outcomes">Outcomes</a>
       <a href="#pricing" data-nav="pricing">Pricing</a>
       <a href="#appendix" data-nav="appendix">Appendix</a>
@@ -159,11 +155,14 @@
     <p class="lede" data-reveal>Build Fasset a growth system your team can keep running. We do the research, read the numbers, and design the experiments across funnel, Meta creative, and Reddit. Your team runs them. We add a layer of people and AI next to your execution team.</p>
   </header>
 
-  <section id="success" data-section="success">
-    <div class="sec-head"><span class="sec-num">01</span><h2>Define success before spend</h2></div>
+  <!-- ===== HOW WE WORK ===== -->
+  <section id="how" data-section="how">
+    <div class="sec-head"><span class="sec-num">01</span><h2>How we work</h2></div>
+
+    <p class="block-label">Define success first</p>
     <p class="kv"><b>North-star metric:</b> CAC to a funded account. Installs and sign-ups do not count until money lands.</p>
     <p class="kv"><b>Guardrails:</b> KYC-complete rate, day-30 retention, blended ROAS.</p>
-    <p><b>How we read a test depends on what it tests.</b> Acquisition and activation fail for different reasons, so they read on different numbers.</p>
+    <p>How we read a test depends on what it tests. Acquisition and activation fail for different reasons, so they read on different numbers.</p>
     <ul>
       <li><strong>Acquisition</strong> (creative, angles, audiences): hook rate, hold rate, CTR, CPI. Does the ad earn cheap, qualified attention that clicks?</li>
       <li><strong>Activation</strong> (funnel, onboarding): step conversion, KYC-complete rate, funded rate. Does that click turn into a funded user?</li>
@@ -174,39 +173,38 @@
       <div class="light-row"><span class="dot y"></span><span><span class="lb">Yellow</span> — 1.5&#8211;2&#215; target. Iterate.</span></div>
       <div class="light-row"><span class="dot r"></span><span><span class="lb">Red</span> — above 2&#215; after meaningful spend. Change the approach.</span></div>
     </div>
-    <p class="closer">Targets hold for the length of the test. No moving goalposts.</p>
-  </section>
+    <p style="margin-top:6px;">Targets hold for the length of the test. No moving goalposts.</p>
 
-  <section id="method" data-section="method">
-    <div class="sec-head"><span class="sec-num">02</span><h2>How we work</h2></div>
+    <p class="block-label">Run growth like engineering</p>
     <ul>
-      <li>We run growth like an engineering team: structured experiments, not scattered tactics.</li>
-      <li>Every experiment and task lives in Linear, so the whole roadmap is visible and tracked.</li>
+      <li>Structured experiments, not scattered tactics. Every experiment and task lives in Linear, so the whole roadmap is visible and tracked.</li>
       <li>A monthly planning sprint sets the batch of experiments. A weekly review reads results and adjusts.</li>
       <li>We write the tickets (hypothesis, change, metric, kill point); your team executes them.</li>
     </ul>
-    <p class="closer">We do the thinking and the measurement. Your team does the posting and shipping.</p>
+    <p>Each month runs the same loop: refresh the numbers, design the next batch of experiments, hand them to your team specced and ready, then read out what won, what got killed, and what is next.</p>
+    <p class="closer">We do the thinking and the measurement. Your team does the posting and shipping. Small improvements compound month over month.</p>
   </section>
 
-  <section id="funnel" data-section="funnel">
-    <div class="sec-head"><span class="sec-num">03</span><h2>Workstream 1 — Funnel</h2></div>
+  <!-- ===== WORKSTREAMS ===== -->
+  <section id="workstreams" data-section="workstreams">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Three workstreams</h2></div>
+
+    <p class="block-label">01 &#183; Funnel</p>
     <p>Fix the funnel before spending more on ads. A better ad just sends more people into a leaky one.</p>
     <ul>
       <li><strong>Audit your app, screen by screen, with real drop-off numbers.</strong> Install to sign-up to basic KYC to full KYC to first deposit to first action to day 7/30. The biggest drop becomes the first test.</li>
       <li><strong>Tear down the competition</strong> the same way, regional and global. Where they have publicly A/B tested their onboarding, we borrow the proven winner.</li>
       <li><strong>Turn gaps into flag-gated experiments</strong> your engineers ship without a meeting. We spec, they flag, we read, they keep or revert.</li>
     </ul>
-    <p class="eyebrow">See appendix A for the full method and drop-off map.</p>
-  </section>
+    <p class="eyebrow">Appendix A — full method and drop-off map.</p>
 
-  <section id="meta" data-section="meta">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Workstream 2 — Meta creative</h2></div>
+    <p class="block-label">02 &#183; Meta creative</p>
     <p>We pull your live ads and your competitors', then read them by age and angle. Age shows what has survived, since brands kill losers fast. The angle mix shows what each competitor is betting on: one runs 160 ads behind a single dominant angle, another spreads across five. The ads that last hand us the creative types and script ideas worth adding to your backlog.</p>
     <ul>
       <li><strong>A content backlog, built from what is proven.</strong> Every angle, offer, and market gets a queue of well-defined ideas, so your team always has something to make.</li>
       <li><strong>An 80/20 budget split.</strong> 80% on proven winners, 20% on new angles from the backlog, with written rules for what graduates and what gets cut.</li>
       <li><strong>Creators and briefs.</strong> We help pick the creators and write the briefs. Concept-led, personal videos ("how I bought SpaceX stock and what happened"), each cut into several versions to test different hooks. Your team films and posts.</li>
-      <li><strong>A weekly creative report.</strong> Each creative reads on its own numbers:</li>
+      <li><strong>A weekly creative report</strong> that reads each creative on its own numbers:</li>
     </ul>
     <div class="diag">
       <div><b>Low hook rate</b><span class="arrow">&#8594;</span>the first three seconds don't grab</div>
@@ -214,35 +212,25 @@
       <div><b>Low CTR</b><span class="arrow">&#8594;</span>weak offer or call to action</div>
       <div><b>High CPI</b><span class="arrow">&#8594;</span>wrong audience, or creative and offer don't match</div>
     </div>
-    <p class="closer">When a creative earns cheap, qualified clicks but users still don't fund, the problem sits in the funnel, and Workstream 1 picks it up.</p>
-    <p class="eyebrow" style="margin-top:16px;">See appendix B&#8211;C for the ad-pull numbers, content backlog, creator references, and hook-adaptation deck.</p>
-  </section>
+    <p>When a creative earns cheap, qualified clicks but users still don't fund, the problem sits in the funnel, and the funnel workstream picks it up.</p>
+    <p class="eyebrow">Appendix B&#8211;C — ad-pull numbers, content backlog, creator references, hook-adaptation deck.</p>
 
-  <section id="reddit" data-section="reddit">
-    <div class="sec-head"><span class="sec-num">05</span><h2>Workstream 3 — Reddit</h2></div>
-    <p>Goal: build authority where your users already are. You are near-invisible on Reddit today, and that audience is unclaimed.</p>
+    <p class="block-label">03 &#183; Reddit</p>
+    <p>Build authority where your users already are. You are near-invisible on Reddit today, and that audience is unclaimed.</p>
     <p>We set up social listening to surface threads worth joining, and anything that mentions Fasset, so warmed-up, high-karma accounts get into the conversation early. A free tool like F5Bot flags every Reddit mention of your keywords in real time. A real thread it would catch, in r/FIREPakistan:</p>
     <figure>
       <img src="assets/reddit-thread-firepakistan.png" alt="r/FIREPakistan — Best Pakistani card for international transactions?">
       <figcaption>r/FIREPakistan — "Best Pakistani card for international transactions?"</figcaption>
     </figure>
     <p>Someone going abroad, asking the exact question Fasset answers. A genuinely helpful reply from a disclosed account, naming Fasset as an option, is the play.</p>
-    <p class="closer">AEO follows for free, because the engines cite Reddit heavily. For now we just track what ChatGPT, Claude, Gemini, and Perplexity say about you. It can become its own workstream later.</p>
+    <p class="closer">AEO follows for free, because the engines cite Reddit heavily. For now we just track what ChatGPT, Claude, Gemini, and Perplexity say about you (appendix D). It can become its own workstream later.</p>
   </section>
 
-  <section id="loop" data-section="loop">
-    <div class="sec-head"><span class="sec-num">06</span><h2>The monthly loop</h2></div>
-    <ol>
-      <li>Refresh the numbers (funnel drop-offs, ad performance, AI answer share).</li>
-      <li>Design the next batch of experiments from what the data says.</li>
-      <li>Hand them to your team, specced and ready.</li>
-      <li>Read out what won, what got killed, and what is next.</li>
-    </ol>
-    <p class="closer">Small improvements compound month over month.</p>
-  </section>
-
+  <!-- ===== OUTCOMES ===== -->
   <section id="outcomes" data-section="outcomes">
-    <div class="sec-head"><span class="sec-num">07</span><h2>What you'll have after 90 days</h2></div>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Outcomes</h2></div>
+
+    <p class="block-label">What you'll have after 90 days</p>
     <ul>
       <li>A validated CAC-to-funded range by channel, angle, and geography.</li>
       <li>The single biggest funnel leak found and 2+ experiments shipped against it.</li>
@@ -252,10 +240,8 @@
       <li>A repeatable experiment system your team runs without us.</li>
     </ul>
     <p class="closer">This becomes your growth story for the next raise.</p>
-  </section>
 
-  <section id="requirements" data-section="requirements">
-    <div class="sec-head"><span class="sec-num">08</span><h2>What we need from you</h2></div>
+    <p class="block-label">What we need from you</p>
     <ul>
       <li>Ad account access and rejected-ad history.</li>
       <li>Analytics in place (we recommend PostHog) and event access, or a week-one setup sprint.</li>
@@ -265,8 +251,9 @@
     </ul>
   </section>
 
+  <!-- ===== PRICING ===== -->
   <section id="pricing" data-section="pricing">
-    <div class="sec-head"><span class="sec-num">09</span><h2>Engagement options</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Engagement options</h2></div>
     <div class="opts">
       <div class="opt">
         <h3>Option 1 — Growth consulting</h3>
@@ -290,16 +277,16 @@
 
   <!-- ===== APPENDIX ===== -->
   <section id="appendix" data-section="appendix">
-    <div class="sec-head"><span class="sec-num">&#8226;</span><h2 class="apx">Appendix</h2></div>
+    <div class="sec-head"><span class="sec-num">&#8226;</span><h2>Appendix</h2></div>
 
-    <h3 class="apx-lead" style="margin-top:8px;">A. Funnel — method</h3>
+    <p class="apx-lead" style="margin-top:8px;">A. Funnel — method</p>
     <p>The artifact we produce: a screen-by-screen teardown with the drop-off and the job each screen is doing. Examples of the format:</p>
     <figure><img src="assets/teardown-tolan.png" alt="Onboarding teardown — Tolan"><figcaption>Onboarding teardown — Tolan</figcaption></figure>
     <figure><img src="assets/teardown-headway.png" alt="Onboarding teardown — Headway"><figcaption>Onboarding teardown — Headway</figcaption></figure>
-    <p>Flow we map: <span class="mono" style="font-size:12px;">install &#8594; sign-up &#8594; basic KYC &#8594; full KYC &#8594; first deposit &#8594; first action &#8594; day 7/30</span>. For each screen: step conversion, drop-off %, time on step, and the one job that screen should do. Public reviews suggest the deep leak is post-KYC (stuck withdrawals, freezes), which the audit confirms or kills with data.</p>
+    <p>Flow we map: <span class="mono" style="font-size:12.5px;">install &#8594; sign-up &#8594; basic KYC &#8594; full KYC &#8594; first deposit &#8594; first action &#8594; day 7/30</span>. For each screen: step conversion, drop-off %, time on step, and the one job that screen should do. Public reviews suggest the deep leak is post-KYC (stuck withdrawals, freezes), which the audit confirms or kills with data.</p>
     <p class="kv"><b>Tools:</b> analytics (PostHog default, or Amplitude / Mixpanel). Feature flags (PostHog built-in, or Statsig).</p>
 
-    <h3 class="apx-lead">B. Meta — the ads to look at</h3>
+    <p class="apx-lead">B. Meta — the ads to look at</p>
     <p>The accounts and volumes we pull and read by age and angle. 100 of yours, 545 across competitors.</p>
     <div class="table-scroll">
     <table>
@@ -317,16 +304,16 @@
     <figure><img src="assets/comp-ads-concepts.png" alt="Competitor creative grouped by concept"><figcaption>Competitor creative grouped by concept &#183; example</figcaption></figure>
     <figure><img src="assets/comp-ads-brandvoice.png" alt="Concept group detail"><figcaption>Concept group detail &#183; example</figcaption></figure>
 
-    <h3 class="apx-lead">C. Meta — the content backlog</h3>
+    <p class="apx-lead">C. Meta — the content backlog</p>
     <p>The backlog perf marketing works from every week: format, product, angle, owner, and status.</p>
     <figure><img src="assets/backlog-sheet.png" alt="Content backlog"><figcaption>Live content backlog &#183; example</figcaption></figure>
 
-    <h3 class="apx-lead">C2. Creator references &amp; the hook-adaptation deck</h3>
+    <p class="apx-lead">C2. Creator references &amp; the hook-adaptation deck</p>
     <p>One creator video per concept, each a different angle on the same product. Cursor:</p>
     <div class="thumbs">
       <figure><img src="assets/cursor-1.png" alt="playing video games wrong"><figcaption>"playing video games wrong"</figcaption></figure>
       <figure><img src="assets/cursor-2.png" alt="build me a meal tracking app"><figcaption>"build me a meal tracking app"</figcaption></figure>
-      <figure><img src="assets/cursor-3.png" alt="agent runs during your morning routine"><figcaption>agent runs during your morning routine</figcaption></figure>
+      <figure><img src="assets/cursor-3.png" alt="agent runs during your morning routine"><figcaption>agent runs, morning routine</figcaption></figure>
     </div>
     <p style="margin-top:6px;">Vitalis (local):</p>
     <div class="thumbs">
@@ -336,7 +323,7 @@
     <p class="eyebrow" style="text-transform:none; letter-spacing:0;">Source posts — Cursor: <a href="https://www.instagram.com/p/DV9wzooAnNu/">1</a>, <a href="https://www.instagram.com/p/DV8l3Lzgd-7/">2</a>, <a href="https://www.instagram.com/p/DV9FLxljQ8a/">3</a>. Vitalis: <a href="https://www.instagram.com/p/DZxC3TWsEZA/">1</a>, <a href="https://www.instagram.com/p/DW_06hzjAUy/">2</a>.</p>
     <p style="margin-top:14px;">Adapting one video to test different hooks: <a href="assets/creative-adapts-deck.pdf" target="_blank">open the deck (PDF)</a> &#183; <a href="https://www.figma.com/deck/hIioqR8LrlNYfFRNT54bLr" target="_blank">Figma</a>.</p>
 
-    <h3 class="apx-lead">D. AEO — track first, then build</h3>
+    <p class="apx-lead">D. AEO — track first, then build</p>
     <p>What the AI engines say about the money queries today, and where they pull it from. Example, "Payoneer alternative Bangladesh":</p>
     <figure><img src="assets/aeo-query-answer.png" alt="AI answer — Payoneer alternatives in Bangladesh"><figcaption>AI answer &#183; Fasset absent</figcaption></figure>
     <figure><img src="assets/aeo-query-sources.png" alt="Sources the engine cited"><figcaption>Sources the engine cited</figcaption></figure>
@@ -356,7 +343,6 @@
     var root = document.documentElement, btn = document.getElementById('themeToggle');
     btn.addEventListener('click', function(){ root.classList.toggle('light'); });
 
-    // missing images -> clean captioned placeholder
     document.querySelectorAll('figure img').forEach(function(img){
       img.addEventListener('error', function(){
         var slot = document.createElement('div');
@@ -366,14 +352,12 @@
       });
     });
 
-    // reveal on scroll
     var revs = document.querySelectorAll('[data-reveal]');
     if ('IntersectionObserver' in window) {
       var ro = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); ro.unobserve(e.target); } }); }, {threshold:0.1});
       revs.forEach(function(el){ ro.observe(el); });
     } else { revs.forEach(function(el){ el.classList.add('in'); }); }
 
-    // scroll-spy nav
     var links = {}; document.querySelectorAll('nav.side a').forEach(function(a){ links[a.getAttribute('data-nav')] = a; });
     var secs = document.querySelectorAll('[data-section]');
     if ('IntersectionObserver' in window) {
@@ -381,7 +365,7 @@
         es.forEach(function(e){
           if(e.isIntersecting){
             var id = e.target.getAttribute('data-section');
-            Object.values(links).forEach(function(l){ l.classList.remove('active'); });
+            Object.keys(links).forEach(function(k){ links[k].classList.remove('active'); });
             if(links[id]) links[id].classList.add('active');
           }
         });
