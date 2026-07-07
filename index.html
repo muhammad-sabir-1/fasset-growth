@@ -113,6 +113,18 @@
   .fee { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-top:16px; padding-top:14px; border-top:1px solid var(--line); }
   .apx-lead { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin:38px 0 8px; }
 
+  /* poolside components */
+  .arrow-link { display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent2); margin:8px 0 0; }
+  .arrow-link:hover { text-decoration:none; opacity:0.72; }
+  .arrow-link .ar { transition:transform .18s ease; }
+  .arrow-link:hover .ar { transform:translateX(3px); }
+  .chip { display:inline-block; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; padding:3px 8px; border-radius:999px; background:var(--accent2); color:var(--on-accent); font-weight:600; vertical-align:middle; margin-left:8px; }
+  .statement { display:grid; grid-template-columns:120px 1fr; gap:22px; margin:22px 0; padding-top:18px; border-top:1px solid var(--line); }
+  .statement .lab { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--faint); padding-top:4px; }
+  .statement .stmt { font-size:19px; line-height:1.38; letter-spacing:-0.015em; color:var(--ink); max-width:none; }
+  .statement .stmt b { color:var(--accent); font-weight:500; }
+  @media(max-width:860px){ .statement{grid-template-columns:1fr; gap:6px;} }
+
   [data-reveal] { opacity:0; transform:translateY(10px); transition:opacity .6s ease, transform .6s ease; }
   [data-reveal].in { opacity:1; transform:none; }
   @media (prefers-reduced-motion: reduce){ [data-reveal]{opacity:1;transform:none;transition:none;} }
@@ -160,7 +172,10 @@
     <div class="sec-head"><span class="sec-num">01</span><h2>How we work</h2></div>
 
     <p class="block-label">Define success first</p>
-    <p class="kv"><b>North-star metric:</b> CAC to a funded account. Installs and sign-ups do not count until money lands.</p>
+    <div class="statement">
+      <div class="lab">North star</div>
+      <div class="stmt"><b>CAC to a funded account.</b> Installs and sign-ups do not count until money lands.</div>
+    </div>
     <p class="kv"><b>Guardrails:</b> KYC-complete rate, day-30 retention, blended ROAS.</p>
     <p>How we read a test depends on what it tests. Acquisition and activation fail for different reasons, so they read on different numbers.</p>
     <ul>
@@ -196,7 +211,7 @@
       <li><strong>Tear down the competition</strong> the same way, regional and global. Where they have publicly A/B tested their onboarding, we borrow the proven winner.</li>
       <li><strong>Turn gaps into flag-gated experiments</strong> your engineers ship without a meeting. We spec, they flag, we read, they keep or revert.</li>
     </ul>
-    <p class="eyebrow">Appendix A — full method and drop-off map.</p>
+    <a class="arrow-link" href="#appendix"><span class="ar">&#8594;</span> Appendix A — full method &amp; drop-off map</a>
 
     <p class="block-label">02 &#183; Meta creative</p>
     <p>We pull your live ads and your competitors', then read them by age and angle. Age shows what has survived, since brands kill losers fast. The angle mix shows what each competitor is betting on: one runs 160 ads behind a single dominant angle, another spreads across five. The ads that last hand us the creative types and script ideas worth adding to your backlog.</p>
@@ -204,16 +219,10 @@
       <li><strong>A content backlog, built from what is proven.</strong> Every angle, offer, and market gets a queue of well-defined ideas, so your team always has something to make.</li>
       <li><strong>An 80/20 budget split.</strong> 80% on proven winners, 20% on new angles from the backlog, with written rules for what graduates and what gets cut.</li>
       <li><strong>Creators and briefs.</strong> We help pick the creators and write the briefs. Concept-led, personal videos ("how I bought SpaceX stock and what happened"), each cut into several versions to test different hooks. Your team films and posts.</li>
-      <li><strong>A weekly creative report</strong> that reads each creative on its own numbers:</li>
+      <li><strong>A weekly creative report</strong> that reads each creative on its own numbers. A low hook rate means the first three seconds don't grab; a low hold rate means the middle loses them.</li>
     </ul>
-    <div class="diag">
-      <div><b>Low hook rate</b><span class="arrow">&#8594;</span>the first three seconds don't grab</div>
-      <div><b>Low hold rate</b><span class="arrow">&#8594;</span>the middle loses them</div>
-      <div><b>Low CTR</b><span class="arrow">&#8594;</span>weak offer or call to action</div>
-      <div><b>High CPI</b><span class="arrow">&#8594;</span>wrong audience, or creative and offer don't match</div>
-    </div>
     <p>When a creative earns cheap, qualified clicks but users still don't fund, the problem sits in the funnel, and the funnel workstream picks it up.</p>
-    <p class="eyebrow">Appendix B&#8211;C — ad-pull numbers, content backlog, creator references, hook-adaptation deck.</p>
+    <a class="arrow-link" href="#appendix"><span class="ar">&#8594;</span> Appendix B&#8211;C — ad-pull numbers, backlog, creators, deck</a>
 
     <p class="block-label">03 &#183; Reddit</p>
     <p>Build authority where your users already are. You are near-invisible on Reddit today, and that audience is unclaimed.</p>
@@ -256,7 +265,7 @@
     <div class="sec-head"><span class="sec-num">04</span><h2>Engagement options</h2></div>
     <div class="opts">
       <div class="opt">
-        <h3>Option 1 — Growth consulting</h3>
+        <h3>Option 1 — Growth consulting <span class="chip">Recommended</span></h3>
         <div class="sub">We run the growth roadmap with you and lead the sprint calls. Your team executes.</div>
         <ul class="grow">
           <li>Monthly planning sprint and weekly review calls</li>
