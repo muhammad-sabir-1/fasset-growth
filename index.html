@@ -38,7 +38,6 @@
   p { text-wrap:pretty; }
   .mono { font-family:'JetBrains Mono',monospace; }
 
-  /* ===== SIDEBAR ===== */
   aside { position:fixed; top:0; left:0; height:100vh; width:212px; padding:24px 26px;
     display:flex; flex-direction:column; justify-content:space-between;
     border-right:1px solid var(--line); background:var(--bg); z-index:60; }
@@ -54,50 +53,45 @@
   #themeToggle { width:28px; height:28px; border:1px solid var(--line-strong); border-radius:6px; background:transparent; cursor:pointer; color:var(--muted); font-family:'JetBrains Mono',monospace; font-size:13px; display:flex; align-items:center; justify-content:center; }
   #themeToggle:hover { color:var(--ink); border-color:var(--accent); }
 
-  /* ===== MAIN ===== */
   main { margin-left:212px; }
   .wrap { max-width:720px; padding:clamp(44px,7vh,88px) clamp(24px,5vw,60px) 140px; }
 
   .eyebrow { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); }
   h1 { font-weight:400; font-size:clamp(30px,4.4vw,42px); line-height:1.1; letter-spacing:-0.04em; margin:18px 0 0; }
   h2 { font-weight:500; font-size:clamp(20px,2.5vw,25px); line-height:1.18; letter-spacing:-0.025em; margin:0; }
-  .lede { font-size:clamp(16px,2vw,18px); line-height:1.6; color:var(--muted); margin-top:24px; max-width:60ch; }
+  .lede { font-size:clamp(16px,2vw,18px); line-height:1.5; color:var(--muted); margin-top:24px; max-width:58ch; }
   section { padding:clamp(34px,5vh,50px) 0; border-top:1px solid var(--line); }
   header { padding-bottom:4px; }
-  .sec-head { display:flex; align-items:baseline; gap:14px; margin-bottom:22px; }
+  .sec-head { display:flex; align-items:baseline; gap:14px; margin-bottom:20px; }
   .sec-num { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); }
   p { margin:0 0 13px; max-width:62ch; }
   ul, ol { margin:0 0 14px; padding-left:0; list-style:none; max-width:62ch; }
   li { position:relative; padding-left:22px; margin:0 0 7px; line-height:1.5; color:var(--muted); }
   li strong { color:var(--ink); font-weight:600; }
-  ul li::before { content:""; position:absolute; left:2px; top:12px; width:5px; height:5px; background:var(--accent); }
+  ul li::before { content:""; position:absolute; left:2px; top:10px; width:5px; height:5px; background:var(--accent); }
   ol { counter-reset:step; }
   ol li { counter-increment:step; }
-  ol li::before { content:counter(step); position:absolute; left:0; top:1px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); }
+  ol li::before { content:counter(step); position:absolute; left:0; top:0; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); }
 
-  .block-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin:34px 0 10px; }
-  .block-label:first-of-type { margin-top:4px; }
-  .kv { margin:0 0 14px; }
+  h3.sub { font-size:15px; font-weight:600; letter-spacing:-0.01em; color:var(--ink); margin:30px 0 10px; }
+  .detail-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--faint); margin:30px 0 8px; }
+  .kv { margin:0 0 12px; }
   .kv b { color:var(--ink); font-weight:600; }
-  .lights { display:flex; flex-direction:column; gap:9px; margin:16px 0; }
+  .lights { display:flex; flex-direction:column; gap:7px; margin:14px 0; }
   .light-row { display:flex; align-items:flex-start; gap:11px; color:var(--muted); }
-  .dot { width:9px; height:9px; border-radius:50%; margin-top:8px; flex:none; }
+  .dot { width:9px; height:9px; border-radius:50%; margin-top:6px; flex:none; }
   .dot.g { background:var(--accent2); } .dot.y { background:var(--warn); } .dot.r { background:var(--bad); }
   .lb { color:var(--ink); font-weight:600; }
-  .diag { display:flex; flex-direction:column; gap:8px; margin:14px 0 16px; }
-  .diag div { color:var(--muted); }
-  .diag b { color:var(--ink); font-weight:600; }
-  .arrow { color:var(--accent); padding:0 7px; }
   .closer { font-size:15.5px; line-height:1.5; color:var(--ink); border-left:2px solid var(--accent); padding-left:16px; margin:20px 0 0; max-width:60ch; }
-  .callout { background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:8px; padding:18px 20px; margin:20px 0 0; font-size:14.5px; line-height:1.6; color:var(--muted); max-width:64ch; }
+  .callout { background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:8px; padding:18px 20px; margin:20px 0 0; font-size:14px; line-height:1.55; color:var(--muted); max-width:64ch; }
   .callout b { color:var(--ink); }
-  table { width:100%; border-collapse:collapse; margin:16px 0; font-size:13px; line-height:1.4; }
+  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:13px; line-height:1.4; }
   th, td { text-align:left; padding:10px 10px; border-bottom:1px solid var(--line); }
   th { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); font-weight:500; }
   td.n, th.n { text-align:right; font-variant-numeric:tabular-nums; }
   tr:first-child td { border-top:1px solid var(--line-strong); }
   .table-scroll { overflow-x:auto; }
-  figure { margin:18px 0; background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:8px; overflow:hidden; max-width:600px; }
+  figure { margin:16px 0; background:var(--surface); box-shadow:inset 0 0 0 1px var(--line); border-radius:8px; overflow:hidden; max-width:600px; }
   figure img { display:block; width:100%; height:auto; }
   figcaption { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.04em; text-transform:uppercase; color:var(--faint); padding:11px 14px; border-top:1px solid var(--line); }
   .fig-slot { min-height:120px; display:flex; align-items:center; justify-content:center; padding:22px; color:var(--faint); font-family:'JetBrains Mono',monospace; font-size:11px; text-align:center; }
@@ -111,19 +105,6 @@
   .opt li { font-size:13.5px; margin-bottom:8px; }
   .opt .grow { flex:1; }
   .fee { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); margin-top:16px; padding-top:14px; border-top:1px solid var(--line); }
-  .apx-lead { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin:38px 0 8px; }
-
-  /* poolside components */
-  .arrow-link { display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent2); margin:8px 0 0; }
-  .arrow-link:hover { text-decoration:none; opacity:0.72; }
-  .arrow-link .ar { transition:transform .18s ease; }
-  .arrow-link:hover .ar { transform:translateX(3px); }
-  .chip { display:inline-block; font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; padding:3px 8px; border-radius:999px; background:var(--accent2); color:var(--on-accent); font-weight:600; vertical-align:middle; margin-left:8px; }
-  .statement { display:grid; grid-template-columns:120px 1fr; gap:22px; margin:22px 0; padding-top:18px; border-top:1px solid var(--line); }
-  .statement .lab { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--faint); padding-top:4px; }
-  .statement .stmt { font-size:18px; line-height:1.32; letter-spacing:-0.015em; color:var(--ink); max-width:none; }
-  .statement .stmt b { color:var(--ink); font-weight:600; }
-  @media(max-width:860px){ .statement{grid-template-columns:1fr; gap:6px;} }
 
   [data-reveal] { opacity:0; transform:translateY(10px); transition:opacity .6s ease, transform .6s ease; }
   [data-reveal].in { opacity:1; transform:none; }
@@ -145,11 +126,11 @@
     <a class="brand" href="#top"><span class="sq"></span><span>Alt Ventures</span></a>
     <nav class="side">
       <a href="#top" data-nav="top">Overview</a>
+      <a href="#funnel" data-nav="funnel">Funnel</a>
+      <a href="#meta" data-nav="meta">Meta</a>
+      <a href="#reddit" data-nav="reddit">Reddit</a>
       <a href="#how" data-nav="how">How we work</a>
-      <a href="#workstreams" data-nav="workstreams">Workstreams</a>
-      <a href="#outcomes" data-nav="outcomes">Outcomes</a>
       <a href="#pricing" data-nav="pricing">Pricing</a>
-      <a href="#appendix" data-nav="appendix">Appendix</a>
     </nav>
   </div>
   <div class="side-foot">
@@ -164,57 +145,31 @@
   <header id="top" data-section="top">
     <div class="eyebrow" data-reveal>Growth proposal &#183; Fasset &#215; Alt Ventures</div>
     <h1 data-reveal>Growth Tools &amp; Strategy<span style="color:var(--accent);">.</span></h1>
-    <p class="lede" data-reveal>Build Fasset a growth system your team can keep running. We do the research, read the numbers, and design the experiments across funnel, Meta creative, and Reddit. Your team runs them. We add a layer of people and AI next to your execution team.</p>
+    <p class="lede" data-reveal>Build Fasset a growth system your team can keep running. We do the research, read the numbers, and design the experiments across funnel, Meta creative, and Reddit. Your team runs them.</p>
   </header>
 
-  <!-- ===== HOW WE WORK ===== -->
-  <section id="how" data-section="how">
-    <div class="sec-head"><span class="sec-num">01</span><h2>How we work</h2></div>
-
-    <p class="block-label">Define success first</p>
-    <div class="statement">
-      <div class="lab">North star</div>
-      <div class="stmt"><b>CAC to a funded account.</b> Installs and sign-ups do not count until money lands.</div>
-    </div>
-    <p class="kv"><b>Guardrails:</b> KYC-complete rate, day-30 retention, blended ROAS.</p>
-    <p>How we read a test depends on what it tests. Acquisition and activation fail for different reasons, so they read on different numbers.</p>
-    <ul>
-      <li><strong>Acquisition</strong> (creative, angles, audiences): hook rate, hold rate, CTR, CPI. Does the ad earn cheap, qualified attention that clicks?</li>
-      <li><strong>Activation</strong> (funnel, onboarding): step conversion, KYC-complete rate, funded rate. Does that click turn into a funded user?</li>
-    </ul>
-    <p>We set each test's target metric before it runs, then read it against the target:</p>
-    <div class="lights">
-      <div class="light-row"><span class="dot g"></span><span><span class="lb">Green</span> — at or below target. Scale it.</span></div>
-      <div class="light-row"><span class="dot y"></span><span><span class="lb">Yellow</span> — 1.5&#8211;2&#215; target. Iterate.</span></div>
-      <div class="light-row"><span class="dot r"></span><span><span class="lb">Red</span> — above 2&#215; after meaningful spend. Change the approach.</span></div>
-    </div>
-    <p style="margin-top:6px;">Targets hold for the length of the test. No moving goalposts.</p>
-
-    <p class="block-label">Run growth like engineering</p>
-    <ul>
-      <li>Structured experiments, not scattered tactics. Every experiment and task lives in Linear, so the whole roadmap is visible and tracked.</li>
-      <li>A monthly planning sprint sets the batch of experiments. A weekly review reads results and adjusts.</li>
-      <li>We write the tickets (hypothesis, change, metric, kill point); your team executes them.</li>
-    </ul>
-    <p>Each month runs the same loop: refresh the numbers, design the next batch of experiments, hand them to your team specced and ready, then read out what won, what got killed, and what is next.</p>
-    <p class="closer">We do the thinking and the measurement. Your team does the posting and shipping. Small improvements compound month over month.</p>
-  </section>
-
-  <!-- ===== WORKSTREAMS ===== -->
-  <section id="workstreams" data-section="workstreams">
-    <div class="sec-head"><span class="sec-num">02</span><h2>Three workstreams</h2></div>
-
-    <p class="block-label">01 &#183; Funnel</p>
+  <!-- ===== FUNNEL ===== -->
+  <section id="funnel" data-section="funnel">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Funnel</h2></div>
     <p>Fix the funnel before spending more on ads. A better ad just sends more people into a leaky one.</p>
     <ul>
       <li><strong>Audit your app, screen by screen, with real drop-off numbers.</strong> Install to sign-up to basic KYC to full KYC to first deposit to first action to day 7/30. The biggest drop becomes the first test.</li>
       <li><strong>Tear down the competition</strong> the same way, regional and global. Where they have publicly A/B tested their onboarding, we borrow the proven winner.</li>
       <li><strong>Turn gaps into flag-gated experiments</strong> your engineers ship without a meeting. We spec, they flag, we read, they keep or revert.</li>
     </ul>
-    <a class="arrow-link" href="#appendix"><span class="ar">&#8594;</span> Appendix A — full method &amp; drop-off map</a>
 
-    <p class="block-label">02 &#183; Meta creative</p>
-    <p>We pull your live ads and your competitors', then read them by age and angle. Age shows what has survived, since brands kill losers fast. The angle mix shows what each competitor is betting on: one runs 160 ads behind a single dominant angle, another spreads across five. The ads that last hand us the creative types and script ideas worth adding to your backlog.</p>
+    <p class="detail-label">The teardown</p>
+    <p>The artifact we produce is a screen-by-screen teardown, with the drop-off and the job each screen is doing. Examples of the format:</p>
+    <figure><img src="assets/teardown-tolan.png" alt="Onboarding teardown — Tolan"><figcaption>Onboarding teardown — Tolan</figcaption></figure>
+    <figure><img src="assets/teardown-headway.png" alt="Onboarding teardown — Headway"><figcaption>Onboarding teardown — Headway</figcaption></figure>
+    <p>We map the flow <span class="mono" style="font-size:12.5px;">install &#8594; sign-up &#8594; basic KYC &#8594; full KYC &#8594; first deposit &#8594; first action &#8594; day 7/30</span>, and for each screen record step conversion, drop-off %, time on step, and the one job that screen should do. Public reviews suggest the deep leak is post-KYC (stuck withdrawals, freezes), which the audit confirms or kills with data.</p>
+    <p class="kv"><b>Tools:</b> analytics (PostHog default, or Amplitude / Mixpanel), and feature flags (PostHog built-in, or Statsig).</p>
+  </section>
+
+  <!-- ===== META ===== -->
+  <section id="meta" data-section="meta">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Meta creative</h2></div>
+    <p>We pull your live ads and your competitors', then read them by age and angle. Age shows what has survived, since brands kill losers fast. The angle mix shows what each competitor is betting on: one runs 160 ads behind a single dominant angle, another spreads across five. The ads that last tell us the creative types and script ideas worth adding to your backlog.</p>
     <ul>
       <li><strong>A content backlog, built from what is proven.</strong> Every angle, offer, and market gets a queue of well-defined ideas, so your team always has something to make.</li>
       <li><strong>An 80/20 budget split.</strong> 80% on proven winners, 20% on new angles from the backlog, with written rules for what graduates and what gets cut.</li>
@@ -222,80 +177,8 @@
       <li><strong>A weekly creative report</strong> that reads each creative on its own numbers. A low hook rate means the first three seconds don't grab; a low hold rate means the middle loses them.</li>
     </ul>
     <p>When a creative earns cheap, qualified clicks but users still don't fund, the problem sits in the funnel, and the funnel workstream picks it up.</p>
-    <a class="arrow-link" href="#appendix"><span class="ar">&#8594;</span> Appendix B&#8211;C — ad-pull numbers, backlog, creators, deck</a>
 
-    <p class="block-label">03 &#183; Reddit</p>
-    <p>Build authority where your users already are. You are near-invisible on Reddit today, and that audience is unclaimed.</p>
-    <p>We set up social listening to surface threads worth joining, and anything that mentions Fasset, so warmed-up, high-karma accounts get into the conversation early. A free tool like F5Bot flags every Reddit mention of your keywords in real time. A real thread it would catch, in r/FIREPakistan:</p>
-    <figure>
-      <img src="assets/reddit-thread-firepakistan.png" alt="r/FIREPakistan — Best Pakistani card for international transactions?">
-      <figcaption>r/FIREPakistan — "Best Pakistani card for international transactions?"</figcaption>
-    </figure>
-    <p>Someone going abroad, asking the exact question Fasset answers. A genuinely helpful reply from a disclosed account, naming Fasset as an option, is the play.</p>
-    <p class="closer">AEO follows for free, because the engines cite Reddit heavily. For now we just track what ChatGPT, Claude, Gemini, and Perplexity say about you (appendix D). It can become its own workstream later.</p>
-  </section>
-
-  <!-- ===== OUTCOMES ===== -->
-  <section id="outcomes" data-section="outcomes">
-    <div class="sec-head"><span class="sec-num">03</span><h2>Outcomes</h2></div>
-
-    <p class="block-label">What you'll have after 90 days</p>
-    <ul>
-      <li>A validated CAC-to-funded range by channel, angle, and geography.</li>
-      <li>The single biggest funnel leak found and 2+ experiments shipped against it.</li>
-      <li>10 creative angles tested, 3 scaled winners, localised into 3 languages.</li>
-      <li>A lower ad-rejection rate, from policy-safe creative.</li>
-      <li>A live, disclosed Reddit presence and a baseline for what the AI engines say about you.</li>
-      <li>A repeatable experiment system your team runs without us.</li>
-    </ul>
-    <p class="closer">This becomes your growth story for the next raise.</p>
-
-    <p class="block-label">What we need from you</p>
-    <ul>
-      <li>Ad account access and rejected-ad history.</li>
-      <li>Analytics in place (we recommend PostHog) and event access, or a week-one setup sprint.</li>
-      <li>One engineer who can put changes behind feature flags.</li>
-      <li>A content and media person to make and run what we design.</li>
-      <li>A 48-hour compliance sign-off on user-facing changes.</li>
-    </ul>
-  </section>
-
-  <!-- ===== PRICING ===== -->
-  <section id="pricing" data-section="pricing">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Engagement options</h2></div>
-    <div class="opts">
-      <div class="opt">
-        <h3>Option 1 — Growth consulting <span class="chip">Recommended</span></h3>
-        <div class="sub">We run the growth roadmap with you and lead the sprint calls. Your team executes.</div>
-        <ul class="grow">
-          <li>Monthly planning sprint and weekly review calls</li>
-          <li>Experiment and task tickets in Linear (hypothesis, change, metric, kill point)</li>
-          <li>Funnel, Meta, and Reddit experiment design</li>
-          <li>The scraped-ad analysis and content backlog</li>
-        </ul>
-        <div class="fee">Fees: $2,000 / month</div>
-      </div>
-      <div class="opt">
-        <h3>Option 2 — Embedded partner</h3>
-        <div class="sub grow">Everything in Option 1, plus we take on execution alongside your team. The specific scope is worked out together, and this option may not be available right now.</div>
-        <div class="fee">Fees: $5,000 / month</div>
-      </div>
-    </div>
-    <div class="callout"><b>Need a specific piece executed?</b> As an alternative to Option 2, we bring in a specialist from our network for a defined job — for example, an AEO specialist who runs the AEO experiments directly. Paid by you, directly to the specialist.</div>
-  </section>
-
-  <!-- ===== APPENDIX ===== -->
-  <section id="appendix" data-section="appendix">
-    <div class="sec-head"><span class="sec-num">&#8226;</span><h2>Appendix</h2></div>
-
-    <p class="apx-lead" style="margin-top:8px;">A. Funnel — method</p>
-    <p>The artifact we produce: a screen-by-screen teardown with the drop-off and the job each screen is doing. Examples of the format:</p>
-    <figure><img src="assets/teardown-tolan.png" alt="Onboarding teardown — Tolan"><figcaption>Onboarding teardown — Tolan</figcaption></figure>
-    <figure><img src="assets/teardown-headway.png" alt="Onboarding teardown — Headway"><figcaption>Onboarding teardown — Headway</figcaption></figure>
-    <p>Flow we map: <span class="mono" style="font-size:12.5px;">install &#8594; sign-up &#8594; basic KYC &#8594; full KYC &#8594; first deposit &#8594; first action &#8594; day 7/30</span>. For each screen: step conversion, drop-off %, time on step, and the one job that screen should do. Public reviews suggest the deep leak is post-KYC (stuck withdrawals, freezes), which the audit confirms or kills with data.</p>
-    <p class="kv"><b>Tools:</b> analytics (PostHog default, or Amplitude / Mixpanel). Feature flags (PostHog built-in, or Statsig).</p>
-
-    <p class="apx-lead">B. Meta — the ads to look at</p>
+    <p class="detail-label">The ad pull</p>
     <p>The accounts and volumes we pull and read by age and angle. 100 of yours, 545 across competitors.</p>
     <div class="table-scroll">
     <table>
@@ -313,11 +196,11 @@
     <figure><img src="assets/comp-ads-concepts.png" alt="Competitor creative grouped by concept"><figcaption>Competitor creative grouped by concept &#183; example</figcaption></figure>
     <figure><img src="assets/comp-ads-brandvoice.png" alt="Concept group detail"><figcaption>Concept group detail &#183; example</figcaption></figure>
 
-    <p class="apx-lead">C. Meta — the content backlog</p>
+    <p class="detail-label">The backlog</p>
     <p>The backlog perf marketing works from every week: format, product, angle, owner, and status.</p>
     <figure><img src="assets/backlog-sheet.png" alt="Content backlog"><figcaption>Live content backlog &#183; example</figcaption></figure>
 
-    <p class="apx-lead">C2. Creator references &amp; the hook-adaptation deck</p>
+    <p class="detail-label">Creator examples</p>
     <p>One creator video per concept, each a different angle on the same product. Cursor:</p>
     <div class="thumbs">
       <figure><img src="assets/cursor-1.png" alt="playing video games wrong"><figcaption>"playing video games wrong"</figcaption></figure>
@@ -330,9 +213,22 @@
       <figure><img src="assets/vitalis-2.png" alt="Vitalis local creator"><figcaption>local creator</figcaption></figure>
     </div>
     <p class="eyebrow" style="text-transform:none; letter-spacing:0;">Source posts — Cursor: <a href="https://www.instagram.com/p/DV9wzooAnNu/">1</a>, <a href="https://www.instagram.com/p/DV8l3Lzgd-7/">2</a>, <a href="https://www.instagram.com/p/DV9FLxljQ8a/">3</a>. Vitalis: <a href="https://www.instagram.com/p/DZxC3TWsEZA/">1</a>, <a href="https://www.instagram.com/p/DW_06hzjAUy/">2</a>.</p>
-    <p style="margin-top:14px;">Adapting one video to test different hooks: <a href="assets/creative-adapts-deck.pdf" target="_blank">open the deck (PDF)</a> &#183; <a href="https://www.figma.com/deck/hIioqR8LrlNYfFRNT54bLr" target="_blank">Figma</a>.</p>
+    <p style="margin-top:12px;">Adapting one video to test different hooks: <a href="assets/creative-adapts-deck.pdf" target="_blank">open the deck (PDF)</a> &#183; <a href="https://www.figma.com/deck/hIioqR8LrlNYfFRNT54bLr" target="_blank">Figma</a>.</p>
+  </section>
 
-    <p class="apx-lead">D. AEO — track first, then build</p>
+  <!-- ===== REDDIT ===== -->
+  <section id="reddit" data-section="reddit">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Reddit</h2></div>
+    <p>Build authority where your users already are. You are near-invisible on Reddit today, and that audience is unclaimed.</p>
+    <p>We set up social listening to surface threads worth joining, and anything that mentions Fasset, so warmed-up, high-karma accounts get into the conversation early. A free tool like F5Bot flags every Reddit mention of your keywords in real time. A real thread it would catch, in r/FIREPakistan:</p>
+    <figure>
+      <img src="assets/reddit-thread-firepakistan.png" alt="r/FIREPakistan — Best Pakistani card for international transactions?">
+      <figcaption>r/FIREPakistan — "Best Pakistani card for international transactions?"</figcaption>
+    </figure>
+    <p>Someone going abroad, asking the exact question Fasset answers. A genuinely helpful reply from a disclosed account, naming Fasset as an option, is the play.</p>
+    <p>AEO follows for free, because the engines cite Reddit heavily. For now we just track what ChatGPT, Claude, Gemini, and Perplexity say about you. It can become its own workstream later.</p>
+
+    <p class="detail-label">Tracking the AI answers</p>
     <p>What the AI engines say about the money queries today, and where they pull it from. Example, "Payoneer alternative Bangladesh":</p>
     <figure><img src="assets/aeo-query-answer.png" alt="AI answer — Payoneer alternatives in Bangladesh"><figcaption>AI answer &#183; Fasset absent</figcaption></figure>
     <figure><img src="assets/aeo-query-sources.png" alt="Sources the engine cited"><figcaption>Sources the engine cited</figcaption></figure>
@@ -342,6 +238,60 @@
       <li><strong>Build.</strong> The strategy to get Fasset into those answers: earn a place on the cited sources, and publish the structured content the engines reward.</li>
     </ol>
     <p>We suggest a tool for the tracking (Profound, Peec AI) or custom-build the agent.</p>
+  </section>
+
+  <!-- ===== HOW WE WORK ===== -->
+  <section id="how" data-section="how">
+    <div class="sec-head"><span class="sec-num">04</span><h2>How we work</h2></div>
+
+    <h3 class="sub">Define success</h3>
+    <p class="kv"><b>North star:</b> CAC to a funded account. Installs and sign-ups do not count until money lands.</p>
+    <p class="kv"><b>Guardrails:</b> KYC-complete rate, day-30 retention, blended ROAS.</p>
+    <p>How we read a test depends on what it tests. Acquisition and activation fail for different reasons, so they read on different numbers.</p>
+    <ul>
+      <li><strong>Acquisition</strong> (creative, angles, audiences): hook rate, hold rate, CTR, CPI. Does the ad earn cheap, qualified attention that clicks?</li>
+      <li><strong>Activation</strong> (funnel, onboarding): step conversion, KYC-complete rate, funded rate. Does that click turn into a funded user?</li>
+    </ul>
+    <p>We set each test's target metric before it runs, then read it against the target:</p>
+    <div class="lights">
+      <div class="light-row"><span class="dot g"></span><span><span class="lb">Green</span> — at or below target. Scale it.</span></div>
+      <div class="light-row"><span class="dot y"></span><span><span class="lb">Yellow</span> — 1.5&#8211;2&#215; target. Iterate.</span></div>
+      <div class="light-row"><span class="dot r"></span><span><span class="lb">Red</span> — above 2&#215; after meaningful spend. Change the approach.</span></div>
+    </div>
+    <p style="margin-top:6px;">Targets hold for the length of the test. No moving goalposts.</p>
+
+    <h3 class="sub">Run growth like engineering</h3>
+    <ul>
+      <li>Every experiment and task lives in Linear, so the whole roadmap is visible and tracked.</li>
+      <li>A monthly planning sprint sets the batch of experiments. A weekly review reads results and adjusts.</li>
+      <li>We write the tickets (hypothesis, change, metric, kill point); your team executes them.</li>
+    </ul>
+    <p>Each month runs the same loop: refresh the numbers, design the next batch of experiments, hand them over specced and ready, then read out what won, what got killed, and what is next.</p>
+    <p class="closer">We do the thinking and the measurement. Your team does the posting and shipping. Small improvements compound month over month.</p>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section id="pricing" data-section="pricing">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Engagement options</h2></div>
+    <div class="opts">
+      <div class="opt">
+        <h3>Option 1 — Growth consulting</h3>
+        <div class="sub">We run the growth roadmap with you and lead the sprint calls. Your team executes.</div>
+        <ul class="grow">
+          <li>Monthly planning sprint and weekly review calls</li>
+          <li>Experiment and task tickets in Linear (hypothesis, change, metric, kill point)</li>
+          <li>Funnel, Meta, and Reddit experiment design</li>
+          <li>The scraped-ad analysis and content backlog</li>
+        </ul>
+        <div class="fee">Fees: $2,000 / month</div>
+      </div>
+      <div class="opt">
+        <h3>Option 2 — Embedded partner</h3>
+        <div class="sub grow">Everything in Option 1, plus we take on execution alongside your team. The specific scope is worked out together, and this option may not be available right now.</div>
+        <div class="fee">Fees: $5,000 / month</div>
+      </div>
+    </div>
+    <div class="callout"><b>Need a specific piece executed?</b> As an alternative to Option 2, we bring in a specialist from our network for a defined job — for example, an AEO specialist who runs the AEO experiments directly. Paid by you, directly to the specialist.</div>
   </section>
 
 </div>
