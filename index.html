@@ -126,7 +126,7 @@
     <a class="brand" href="#top"><span class="sq"></span><span>Alt Ventures</span></a>
     <nav class="side">
       <a href="#top" data-nav="top">Overview</a>
-      <a href="#funnel" data-nav="funnel">Funnel</a>
+      <a href="#funnel" data-nav="funnel">Activation</a>
       <a href="#meta" data-nav="meta">Meta</a>
       <a href="#reddit" data-nav="reddit">Reddit</a>
       <a href="#how" data-nav="how">How we work</a>
@@ -150,20 +150,20 @@
 
   <!-- ===== FUNNEL ===== -->
   <section id="funnel" data-section="funnel">
-    <div class="sec-head"><span class="sec-num">01</span><h2>Funnel</h2></div>
-    <p>Fix the funnel before spending more on ads. A better ad just sends more people into a leaky one.</p>
-    <ul>
-      <li><strong>Audit your app, screen by screen, with real drop-off numbers.</strong> Install to sign-up to basic KYC to full KYC to first deposit to first action to day 7/30. The biggest drop becomes the first test.</li>
-      <li><strong>Tear down the competition</strong> the same way, regional and global. Where they have publicly A/B tested their onboarding, we borrow the proven winner.</li>
-      <li><strong>Turn gaps into flag-gated experiments</strong> your engineers ship without a meeting. We spec, they flag, we read, they keep or revert.</li>
-    </ul>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Activation experiments</h2></div>
+    <p>This is likely the biggest lever, since it directly affects CAC, spend per user, and more. A simple process for the first experiments:</p>
+    <ol>
+      <li>Audit your app, screen by screen, with real drop-off numbers. Install to sign-up to basic KYC to full KYC to first deposit to first action to day 7/30. The biggest drop becomes the first test.</li>
+      <li>Tear down the competition the same way, regional and global. Where they have publicly A/B tested their onboarding, we borrow the proven winner.</li>
+      <li>Turn gaps into flag-gated experiments your engineers ship without a meeting. We spec, they flag, we read, they keep or revert.</li>
+    </ol>
 
     <p class="detail-label">The teardown</p>
     <p>The artifact we produce is a screen-by-screen teardown, with the drop-off and the job each screen is doing. Examples of the format:</p>
     <figure><img src="assets/teardown-tolan.png" alt="Onboarding teardown — Tolan"><figcaption>Onboarding teardown — Tolan</figcaption></figure>
     <figure><img src="assets/teardown-headway.png" alt="Onboarding teardown — Headway"><figcaption>Onboarding teardown — Headway</figcaption></figure>
     <p>We map the flow <span class="mono" style="font-size:12.5px;">install &#8594; sign-up &#8594; basic KYC &#8594; full KYC &#8594; first deposit &#8594; first action &#8594; day 7/30</span>, and for each screen record step conversion, drop-off %, time on step, and the one job that screen should do. Public reviews suggest the deep leak is post-KYC (stuck withdrawals, freezes), which the audit confirms or kills with data.</p>
-    <p class="kv"><b>Tools:</b> analytics (PostHog default, or Amplitude / Mixpanel), and feature flags (PostHog built-in, or Statsig).</p>
+    <p class="kv"><b>Tools:</b> analytics (PostHog default, or Amplitude / Mixpanel), and feature flags (PostHog built-in).</p>
   </section>
 
   <!-- ===== META ===== -->
